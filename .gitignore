@@ -1,0 +1,22 @@
+# Ignored
+*/
+pavucontrol.ini
+mimeapps.list
+QtProject.conf
+xbindkeysrc
+# Alacritty config
+!alacritty/
+!alacritty/*/
+# Fish config
+!fish/
+!fish/*/
+# Rofi config
+!rofi/
+# Vifm config
+!vifm/
+!vifm/*/
+# Qtile config
+!qtile/
+!qtile/*
+**/__pycache__
+qtile/settings.json

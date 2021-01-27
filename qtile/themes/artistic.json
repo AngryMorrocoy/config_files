@@ -1,0 +1,9 @@
+{
+    "text": ["#ffffff", "#ffffff"],
+    "active": ["#ffffff", "#ffffff"],
+    "inactive": ["#BD7C6C", "#BD7C6C"],
+    "color1": ["#072249", "#072249"],
+    "color2": ["#FD2946", "#FD2946"],
+    "color3": ["#030735", "#030735"],
+    "color4": ["#ACBCB2", "#ACBCB2"]
+}
