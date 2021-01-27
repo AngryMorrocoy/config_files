@@ -6,7 +6,7 @@ QtProject.conf
 xbindkeysrc
 # Alacritty config
 !alacritty/
-!alacritty/*/
+!alacritty/*
 # Fish config
 !fish/
 !fish/*/
@@ -14,7 +14,8 @@ xbindkeysrc
 !rofi/
 # Vifm config
 !vifm/
-!vifm/*/
+!vifm/*
+vifm/vifminfo.json
 # Qtile config
 !qtile/
 !qtile/*
