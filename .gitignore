@@ -10,7 +10,7 @@ xbindkeysrc
 !alacritty/*
 # Fish config
 !fish/
-!fish/*/
+!fish/*
 # Rofi config
 !rofi/
 # Vifm config
