@@ -1,6 +1,6 @@
 # Ignored
 */
-*
+picom.conf
 pavucontrol.ini
 mimeapps.list
 QtProject.conf
