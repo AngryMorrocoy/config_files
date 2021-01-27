@@ -13,7 +13,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     #--Toggles visibility the info bar--#
     [[mod, alt], "b", lazy.hide_show_bar("bottom")],
     #--Shows a terminal--
-    [[mod], "Return", lazy.spawn(f"{terminal} -e fish")],
+    [[mod], "Return", lazy.spawn(f"{terminal}")],
     #--Launchs rofi--
     [[mod], "m", lazy.spawn("rofi -matching regex -modi run,drun -show run")],
     [[alt], "Tab", lazy.spawn("rofi -matching regex -modi window -show window")],
