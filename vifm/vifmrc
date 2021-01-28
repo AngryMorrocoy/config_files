@@ -29,7 +29,7 @@ set syscalls
 " I recommend not changing this until you are familiar with vifm.
 " This probably shouldn't be an option.
 
-set trash
+set notrash
 
 " This is how many directories to store in the directory history.
 
@@ -445,7 +445,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!alacritty --working-directory %d 2>/dev/null&<cr>
+nnoremap ,t :!alacritty --working-directory %d -e fish 2>/dev/null&<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
