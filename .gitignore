@@ -5,9 +5,6 @@ pavucontrol.ini
 mimeapps.list
 QtProject.conf
 xbindkeysrc
-# Alacritty config
-!alacritty/
-!alacritty/*
 # Fish config
 !fish/
 !fish/*
