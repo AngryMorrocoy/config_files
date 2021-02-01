@@ -4,12 +4,13 @@ from settings.keys import mod, keys
 
 
 groups = [Group(ws, **kwargs) for ws, kwargs in [
-    ["",  {"layout": "max"}],
+    ["",  {"layout": "max"}],
     ["",  {"layout": "monadtall"}],
     ["嗢", {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
+    ["",  {"layout": "monadtall"}],
     ["﬒",  {"layout": "monadtall"}]
 ]]
 

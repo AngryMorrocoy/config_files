@@ -6,16 +6,13 @@ mimeapps.list
 QtProject.conf
 xbindkeysrc
 # Fish config
-!fish/
-!fish/*
+!fish/**
 # Rofi config
-!rofi/
+!rofi/**
 # Vifm config
-!vifm/
-!vifm/*
+!vifm/**
 vifm/vifminfo.json
 # Qtile config
-!qtile/
-!qtile/*
+!qtile/**
 **/__pycache__
 qtile/settings.json
