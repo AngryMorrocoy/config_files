@@ -1,18 +1,22 @@
 # Ignored
 */
-picom.conf
 pavucontrol.ini
 mimeapps.list
 QtProject.conf
 xbindkeysrc
+picom.conf
 # Fish config
-!fish/**
+!fish/
+!fish/*
 # Rofi config
-!rofi/**
+!rofi/
 # Vifm config
-!vifm/**
+!vifm/
+!vifm/*
 vifm/vifminfo.json
 # Qtile config
-!qtile/**
+!qtile/
+!qtile/*/
+
 **/__pycache__
 qtile/settings.json

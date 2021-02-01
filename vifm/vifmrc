@@ -402,7 +402,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " Sample mappings
 
 " Start shell in current directory
-nnoremap s :!fish<cr>
+nnoremap s :!zsh<cr>
 
 " Display sorting dialog
 nnoremap S :sort<cr>
