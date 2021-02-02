@@ -1,7 +1,32 @@
-import socket
-from os import environ
 from libqtile import widget
 from settings.themes import colors
+from bs4 import BeautifulSoup
+import requests
+import re
+
+def get_dollar():
+    monitordollar_url = "https://monitordolarvzla.com/category/promedio-del-dolar/"
+    try:
+        page = requests.get(monitordollar_url)
+    except Exception as e:
+        return re.search("<class '(.*)'", str(e.__class__)).groups()[0]
+    if not page.ok:
+        return "Couldn't get the data"
+
+    soup = BeautifulSoup(page.content, "lxml")
+
+    dollar_paragraph = ""
+
+    for tag in filter(lambda tag: tag.has_attr("class"), soup.find_all("div")):
+        if "entry-content" in tag.attrs["class"]:
+            dollar_paragraph = tag.p.text
+            break
+    extract_pattern = "(\d+(?:/\d+){2}) (\d+:\d+ (?:AM|PM)) Bs ([^\s]+)"
+
+    date, time, dollar_price = re.search(extract_pattern, dollar_paragraph).groups()
+
+    return f"{dollar_price} Bs (Last update: [{date}] at {time})"
+
 
 base = lambda fg="text", bg="color1", font="DroidSansMono Nerd Font":{
     "foreground": colors[fg],
@@ -46,7 +71,7 @@ groupbox = [
         use_mouse_wheel=False,
     ),
     widget.WindowName(
-        **base(),
+        **base(font="JetBrains Mono Medium Nerd Font"),
         padding=3,
         fontsize=10
     ),
@@ -97,15 +122,13 @@ infobar_widgets = [
     text_icon(bg="color3", fg="color4", text=" ", fontsize=17),
     widget.ThermalSensor(**base(bg="color3", font="Dyuthi Regular"), threshold=90, padding=0),
     separator("color3", padding=7),
-    widget.Prompt(
-        background=colors["color1"],
-        padding=10,
-        prompt="{}@{}> ".format(socket.gethostname(), environ["USER"]),
-        fontsize=12
-    ),
-    separator("color3", padding=1100)
+    round_powerline("color2", "color3"),
+    text_icon(fg="color4", bg="color2", text=""),
+    separator("color2", padding=7),
+    widget.GenPollText(**base(bg="color2", font="Dyuthi Regular"), fontsize=15,
+                       func=get_dollar, update_interval=(60*60*12)),
+    separator("color2", padding=7000),
 ]
-
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font Bold',
