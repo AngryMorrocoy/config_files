@@ -1,6 +1,7 @@
 from libqtile import widget
 from settings.themes import colors
 from bs4 import BeautifulSoup
+from os import environ
 import requests
 import re
 
@@ -78,6 +79,10 @@ groupbox = [
 ]
 
 mainbar_widgets = [
+    widget.Prompt(**base(bg="color1", font="agave regular Nerd Font Complete"),
+        prompt=f" {environ['USER']}> ",
+        padding=5
+    ),
     *groupbox,
     round_powerline("color2", "color1"),
     widget.CurrentLayoutIcon(
