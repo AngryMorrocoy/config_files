@@ -63,6 +63,7 @@ groupbox = [
 
         highlight_color=colors["color3"],
         active=colors["active"],
+        this_current_screen_border=colors["color3"],
         inactive=colors["inactive"],
 
         highlight_method="line",
