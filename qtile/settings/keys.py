@@ -1,9 +1,11 @@
+from os import environ
 from libqtile.config import Key
 from libqtile.command import lazy
 
 terminal = "alacritty"
 wallpapers = "/home/mr/Wallpapers/"
 
+HOME = environ["HOME"]
 mod = "mod4"
 alt = "mod1"
 
@@ -68,8 +70,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     #--Movement between groups--#
 
-    [[mod], "End", lazy.screen.next_group()],
-    [[mod], "Home", lazy.screen.prev_group()],
+    [[mod], "p", lazy.screen.next_group()],
+    [[mod], "u", lazy.screen.prev_group()],
 
     ### Music management
 
