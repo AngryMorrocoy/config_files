@@ -2,6 +2,7 @@ from libqtile import widget
 from settings.themes import colors
 from bs4 import BeautifulSoup
 from os import environ
+import subprocess
 import requests
 import re
 
@@ -28,6 +29,29 @@ def get_dollar():
 
     return f"{dollar_price} Bs (Last update: [{date}] at {time})"
 
+
+def get_battery_status():
+    ICONS = {
+        "C": [x+" " for x in ""],
+        "D": [x+"  " for x in ""],
+    }
+    bats_out = subprocess.check_output("bats", universal_newlines=True).rstrip()
+
+    batt_lvl, batt_status = re.search("^(\d+)(\D{1})$", bats_out).groups()
+    batt_lvl = int(batt_lvl)
+
+    if batt_status == "F":
+        return f"  {batt_lvl}%"
+
+    batt_icon = ""
+
+    for i, icon in enumerate(ICONS[batt_status], 1):
+        if round(batt_lvl/10) <= i:
+            break
+        batt_icon = icon
+    return f"{batt_icon}{batt_lvl}%"
+
+print(get_battery_status())
 
 base = lambda fg="text", bg="color1", font="DroidSansMono Nerd Font":{
     "foreground": colors[fg],
@@ -110,6 +134,10 @@ mainbar_widgets = [
         format="%H:%M [%a %d/%m/%Y] ",
         fontsize=14
     ),
+    round_powerline("color1", "color2"),
+    widget.GenPollText(**base(bg="color1", font="mononoki-Regular Nerd Font complete"), fontsize=15,
+                       func=get_battery_status, update_interval=3),
+    separator("color1"),
 ]
 
 infobar_widgets = [
