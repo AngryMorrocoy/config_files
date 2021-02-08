@@ -136,7 +136,7 @@ mainbar_widgets = [
     ),
     round_powerline("color1", "color2"),
     widget.GenPollText(**base(bg="color1", font="mononoki-Regular Nerd Font complete"), fontsize=15,
-                       func=get_battery_status, update_interval=3),
+                       func=get_battery_status, update_interval=2),
     separator("color1"),
 ]
 
