@@ -35,7 +35,10 @@ def get_battery_status():
         "C": [x+" " for x in ""],
         "D": [x+"  " for x in ""],
     }
-    bats_out = subprocess.check_output("bats", universal_newlines=True).rstrip()
+    try:
+        bats_out = subprocess.check_output("bats", universal_newlines=True).rstrip()
+    except subprocess.CalledProcessError:
+        return "..."
 
     batt_lvl, batt_status = re.search("^(\d+)(\D{1})$", bats_out).groups()
     batt_lvl = int(batt_lvl)
@@ -51,7 +54,7 @@ def get_battery_status():
         batt_icon = icon
     return f"{batt_icon}{batt_lvl}%"
 
-print(get_battery_status())
+# print(get_battery_status())
 
 base = lambda fg="text", bg="color1", font="DroidSansMono Nerd Font":{
     "foreground": colors[fg],
