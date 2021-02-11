@@ -61,6 +61,9 @@ configuration {
     /*theme: "lb";*/
     /*theme: "android_notification";*/
     /*theme: "Adapta-Nokto";*/
+    /*theme: "Arc-Dark";*/
+    theme: "Pop-Dark";
+    /*theme: "purple";*/
 
     /*color-normal: ;*/
     /*color-urgent: ;*/
@@ -119,7 +122,7 @@ configuration {
     kb-row-select: "Control+space";
     kb-screenshot: "Alt+S";
     kb-ellipsize: "Alt+period";
-    kb-toggle-case-sensitivity: "grave,dead_grave";
+    kb-toggle-case-sensitivity: "";
     kb-toggle-sort: "Alt+grave";
     kb-cancel: "Escape,Control+g,Control+bracketleft";
     kb-custom-1: "Alt+1";
