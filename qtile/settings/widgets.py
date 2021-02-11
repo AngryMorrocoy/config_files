@@ -34,6 +34,7 @@ def get_battery_status():
     ICONS = {
         "C": [x+" " for x in ""],
         "D": [x+"  " for x in ""],
+        "U": [x+"  " for x in ""],
     }
     try:
         bats_out = subprocess.check_output("bats", universal_newlines=True).rstrip()
@@ -54,7 +55,6 @@ def get_battery_status():
         batt_icon = icon
     return f"{batt_icon}{batt_lvl}%"
 
-# print(get_battery_status())
 
 base = lambda fg="text", bg="color1", font="DroidSansMono Nerd Font":{
     "foreground": colors[fg],
