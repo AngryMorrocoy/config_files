@@ -28,6 +28,7 @@ URLS=(
   ["superuser"]="http://superuser.com/search?q="
   ["askubuntu"]="http://askubuntu.com/search?q="
   ["youtube"]="https://www.youtube.com/results?search_query="
+  ["azlyrics"]="https://search.azlyrics.com/search.php?q="
 )
 
 ICONS=(
@@ -38,6 +39,7 @@ ICONS=(
   ["superuser"]=""
   ["askubuntu"]=""
   ["youtube"]=""
+  ["azlyrics"]=""
 )
 
 # List for rofi

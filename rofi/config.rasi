@@ -62,8 +62,9 @@ configuration {
     /*theme: "android_notification";*/
     /*theme: "Adapta-Nokto";*/
     /*theme: "Arc-Dark";*/
-    theme: "Pop-Dark";
+    /*theme: "Pop-Dark";*/
     /*theme: "purple";*/
+    theme: "minimal";
 
     /*color-normal: ;*/
     /*color-urgent: ;*/
