@@ -12,8 +12,9 @@ alt = "mod1"
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     ### Spawn util apps
 
-    #--Toggles visibility of the info bar--#
+    #--Toggles visibility of the bars--#
     [[mod, alt], "b", lazy.hide_show_bar("bottom")],
+    [[mod, alt], "h", lazy.hide_show_bar("top")],
     #--Shows a terminal--#
     [[mod], "Return", lazy.spawn(f"{terminal} -e zsh")],
     #--Launchs rofi--#
