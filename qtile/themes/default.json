@@ -2,6 +2,7 @@
     "text": ["#ffffff", "#ffffff"],
     "active": ["#ffffff", "ffffff"],
     "inactive": ["#5C5C5C", "#5C5C5C"],
+    "urgent": ["#8307A2", "#8307A2"],
     "color1": ["#18151E", "#18151E"],
     "color2": ["#052348", "#052348"],
     "color3": ["#221439", "#221439"],

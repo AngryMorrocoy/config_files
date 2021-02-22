@@ -3,7 +3,7 @@ configuration {
     width: 50;
     lines: 7;
     columns: 1;
-    font: "UbuntuMono NF 13";
+    font: "agave Nerd Font 12";
     bw: 2;
     location: 6;
     padding: 10;
@@ -63,8 +63,8 @@ configuration {
     /*theme: "Adapta-Nokto";*/
     /*theme: "Arc-Dark";*/
     /*theme: "Pop-Dark";*/
-    /*theme: "purple";*/
-    theme: "minimal";
+    theme: "purple";
+    /*theme: "minimal";*/
 
     /*color-normal: ;*/
     /*color-urgent: ;*/

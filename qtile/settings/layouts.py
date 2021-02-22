@@ -16,5 +16,5 @@ layouts = [
     # layout.Matrix(**layout_theme),
 ]
 
-floating_layout = layout.Floating()
+floating_layout = layout.Floating(**{key:value for key,value in layout_theme.items() if key != "margin"})
 

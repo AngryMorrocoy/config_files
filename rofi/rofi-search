@@ -56,12 +56,12 @@ main() {
 
   if [[ -n "$platform" ]]; then
     if [[ ${ICONS[$platform]} = "" ]]; then
-        query=$( (echo "Go back") | rofi -dmenu -lines 1 -p "${platform[@]^}" )
+        query=$( (echo " Go back") | rofi -dmenu -lines 1 -p "${platform[@]^}" )
     else
-        query=$( (echo "Go back") | rofi -dmenu -lines 1 -p "${ICONS[$platform]}|${platform[@]^}" )
+        query=$( (echo " Go back") | rofi -dmenu -lines 1 -p "${ICONS[$platform]}|${platform[@]^}" )
     fi
 
-    if [[ "${query}" = "Go back" ]]; then
+    if [[ "${query}" = " Go back" ]]; then
       main
     elif [[ -n "$query" ]]; then
       url=${URLS[$platform]}$query
