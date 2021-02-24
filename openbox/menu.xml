@@ -27,7 +27,15 @@
 <menu id="apps-term-menu" label="Terminals">
   <item label="Alacritty">
     <action name="Execute">
-      <command>terminator -e zsh</command>
+      <command>alacritty -e zsh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Terminator">
+    <action name="Execute">
+      <command>terminator</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

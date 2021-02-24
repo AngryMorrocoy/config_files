@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -39,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Clearlooks-Olive</name>
+    <name>Lean</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -54,57 +55,57 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>sans</name>
+      <name>mononoki Nerd Font Mono</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -120,12 +121,12 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -265,7 +266,7 @@
         <direction>down</direction>
       </action>
     </keybind>
-  <!--Apps launching-->
+    <!--Apps launching-->
     <!--Firefox-->
     <keybind key="C-W-1">
       <action name="Execute">
@@ -299,10 +300,10 @@
     <!--Terminal (terminator)-->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>terminator</command>
+        <command>alacritty -e zsh</command>
       </action>
     </keybind>
-  <!--Media player control-->
+    <!--Media player control-->
     <!--Vol up/down-->
     <keybind key="W-A-Prior">
       <action name="Execute">
@@ -347,7 +348,7 @@
         <command>playerctl --player=vlc,%any position 10-</command>
       </action>
     </keybind>
-  <!--System control-->
+    <!--System control-->
     <!--Reload and quit-->
     <keybind key="W-C-r">
       <action name="Reconfigure"/>
@@ -382,7 +383,7 @@
         <command>brightnessctl set 10%-</command>
       </action>
     </keybind>
-  <!--Window size control-->
+    <!--Window size control-->
     <!--Position to left-->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -390,7 +391,9 @@
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
-      <action name="MoveToEdge"><direction>west</direction></action>
+      <action name="MoveToEdge">
+        <direction>west</direction>
+      </action>
     </keybind>
     <!--Position to right-->
     <keybind key="W-Right">
@@ -399,7 +402,9 @@
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
-      <action name="MoveToEdge"><direction>east</direction></action>
+      <action name="MoveToEdge">
+        <direction>east</direction>
+      </action>
     </keybind>
     <!--Unmaximize-->
     <keybind key="W-Down">
@@ -414,7 +419,6 @@
       <action name="ToggleFullscreen"/>
     </keybind>
   </keyboard>
-
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
