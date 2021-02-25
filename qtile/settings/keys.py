@@ -62,6 +62,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     #--Toggle window types--#
     [[mod, "shift"], "m", lazy.window.toggle_fullscreen()],
     [[mod, "shift"], "f", lazy.window.toggle_floating()],
+    #--Normalize and maximize the size of the windows (Mondad/tall/wide)
+    [[mod, "shift"], "n", lazy.layout.normalize()],
+    [[mod, "shift"], "o", lazy.layout.maximize()],
     ### Layout managements and control
 
     #--Switch sides of the layout--#
