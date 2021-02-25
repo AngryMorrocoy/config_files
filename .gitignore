@@ -18,6 +18,10 @@ vifm/vifminfo.json
 # Openbox config
 !openbox/*
 !openbox/*/
+# Zsh config
+!zsh/*
+!zsh/*/
+zsh/oh-my-zsh
 
 **/__pycache__
 qtile/settings.json

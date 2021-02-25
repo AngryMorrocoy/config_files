@@ -1,0 +1,38 @@
+# __  __ ____
+#|  \/  |  _ \
+#| |\/| | |_) |
+#| |  | |  _ <
+#|_|  |_|_| \_\
+#*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+# Default Stuff, don't know what they do
+emulate sh -c 'source /etc/profile'
+#*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+# Add .local/bin to path
+export PATH="${PATH}:$HOME/.local/bin/"
+
+# Default editor
+export EDITOR="vim"
+
+export XDG_CONFIG_HOME="$HOME/.config/"
+export XDG_CACHE_HOME="$HOME/.cache/"
+export XDG_DATA_HOME="$HOME/.local/share/"
+
+export XAUTHORITY="${XDG_CONFIG_HOME}/Xauthority"
+
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+
+# For ncurses disk usage
+export NCDU_SHELL=zsh
+
+# Vim cleaning
+export VIMINIT="source $HOME/.config/vim/vimrc"
+
+# Startx if user in tty1 or tty2
+
+if [[ -z $DISPLAY ]]; then
+    if [[ $(tty) = /dev/tty1 ]] || [[ $(tty) = /dev/tty2 ]];then
+        exec startx
+    fi
+fi
+
