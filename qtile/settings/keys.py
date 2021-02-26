@@ -2,7 +2,7 @@ from os import environ
 from libqtile.config import Key
 from libqtile.command import lazy
 
-terminal = "alacritty"
+terminal = "termite"
 wallpapers = "/home/mr/Wallpapers/"
 
 HOME = environ["HOME"]
@@ -27,6 +27,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     [[mod, "control"], "3", lazy.spawn(f"{terminal} -e vifm")],
     [[mod, "control"], "w", lazy.spawn(f"nitrogen '{wallpapers}'")],
     [[mod, "control"], "p", lazy.spawn("zeal")],
+    [[mod, "control"], "h", lazy.spawn(f"{terminal} -e htop")],
     #--Switches my mouse modes--#
     [[mod, alt], "m", lazy.spawn("mouse_emulator")],
 
