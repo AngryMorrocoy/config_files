@@ -2,7 +2,7 @@ from os import environ
 from libqtile.config import Key
 from libqtile.command import lazy
 
-terminal = "termite"
+terminal = "alacritty"
 wallpapers = "/home/mr/Wallpapers/"
 
 HOME = environ["HOME"]

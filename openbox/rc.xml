@@ -300,7 +300,7 @@
     <!--Terminal (terminator)-->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>alacritty -e zsh</command>
+        <command>alacritty</command>
       </action>
     </keybind>
     <!--Media player control-->
