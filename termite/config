@@ -23,10 +23,10 @@ scrollback_lines = 10000
 browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = system
+cursor_blink = on
 
 # "block", "underline" or "ibeam"
-cursor_shape = block
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -43,7 +43,7 @@ cursor_shape = block
 # ====================================
 [colors]
 
-background= rgba(29, 32, 33, 0.95)
+background= rgba(29, 32, 33, .9)
 foreground= #ebdbb2
 
 color0=  #282828
