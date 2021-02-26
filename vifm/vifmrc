@@ -445,7 +445,8 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!alacritty --working-directory %d -e zsh 2>/dev/null&<cr>
+"nnoremap ,t :!alacritty --working-directory %d 2>/dev/null&<cr>
+nnoremap ,t :!termite -d %d 2>/dev/null&<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
