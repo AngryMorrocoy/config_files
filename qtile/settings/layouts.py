@@ -2,7 +2,7 @@ from libqtile import layout
 from settings.themes import colors
 
 layout_theme = {
-    "border_width": 2,
+    "border_width": 1,
     "margin": 4,
     "border_focus": colors["color4"][0],
     "border_normal": colors["inactive"][0]
@@ -12,8 +12,8 @@ layouts = [
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
-    layout.Stack(**layout_theme, num_stacks=2),
-    # layout.Matrix(**layout_theme),
+    # layout.Stack(**layout_theme, num_stacks=2),
+    layout.Matrix(**{key:value for key,value in layout_theme.items() if key != "margin"}, margin=0),
 ]
 
 floating_layout = layout.Floating(**{key:value for key,value in layout_theme.items() if key != "margin"})
