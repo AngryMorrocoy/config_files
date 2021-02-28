@@ -1,8 +1,6 @@
 # AngryMorrocoy's (Manuel Rivas) configuration files
 
-Here I save some of my common configuration
-
-##### Here are included
+##### Config list
 
 - Gtk-3.0
 - Openbox
@@ -13,4 +11,14 @@ Here I save some of my common configuration
 - Vim (submodule)
 - X11
 - Zsh
+---
+
+### Gtk-3.0
+
+
+
+- bookmakrs
+    Nothing to resalt here, just some bookmarks for gui file managers.
+- gtk.css
+    Just one style, for adding a 2px padding to termite.
 
