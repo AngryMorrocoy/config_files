@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from libqtile.command import lazy
 
 def get_dollar():
+    '''This functions just do web scrapping to get the actual price of the dollar in BsF'''
     monitordollar_url = "https://monitordolarvzla.com/category/promedio-del-dolar/"
     try:
         page = requests.get(monitordollar_url)
@@ -29,6 +30,7 @@ def get_dollar():
 
 
 def get_battery_status():
+    '''This functions returns an unicode formated battery status'''
     ICONS = {
         "C": [x+" " for x in ""],
         "D": [x+"  " for x in ""],

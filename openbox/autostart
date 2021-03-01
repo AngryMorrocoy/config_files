@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-cbatticon -l 30 -r 15 -u 2 -i symbolic -c "echo 3_Arepas | sudo -S safe_poweroff" &
+cbatticon -l 30 -r 15 -u 2 -i symbolic &
 volumeicon &
 nm-applet &
 picom -i .88 -o .92 &
