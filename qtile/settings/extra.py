@@ -4,6 +4,21 @@ import re
 from bs4 import BeautifulSoup
 from libqtile.command import lazy
 
+
+def window_to_next_group(qtile):
+    group_names = [x.name for x in qtile.groups]
+    current_group = qtile.current_group.name
+    next_group = group_names[(group_names.index(current_group) + 1) % len(group_names)]
+    qtile.current_window.cmd_togroup(next_group)
+
+
+def window_to_prev_group(qtile):
+    group_names = [x.name for x in qtile.groups]
+    current_group = qtile.current_group.name
+    next_group = group_names[(group_names.index(current_group) - 1) % len(group_names)]
+    qtile.current_window.cmd_togroup(next_group)
+
+
 def get_dollar():
     '''This functions just do web scrapping to get the actual price of the dollar in BsF'''
     monitordollar_url = "https://monitordolarvzla.com/category/promedio-del-dolar/"

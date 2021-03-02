@@ -2,8 +2,7 @@ from libqtile.config import Key, Group
 from libqtile.command import lazy
 from settings.keys import mod, keys
 
-
-groups = [Group(ws, **kwargs) for ws, kwargs in [
+group_settings = [
     ["",  {"layout": "max"}],
     ["",  {"layout": "monadtall"}],
     ["嗢", {"layout": "monadtall"}],
@@ -12,7 +11,9 @@ groups = [Group(ws, **kwargs) for ws, kwargs in [
     ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
     ["﬒",  {"layout": "monadtall"}]
-]]
+]
+
+groups = [Group(ws, **kwargs) for ws, kwargs in group_settings]
 
 for i, ws in enumerate(groups, 1):
     keys.extend([

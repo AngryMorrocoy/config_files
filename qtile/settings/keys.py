@@ -1,6 +1,9 @@
 from os import environ
 from libqtile.config import Key
 from libqtile.command import lazy
+from .extra import window_to_next_group
+from .extra import window_to_prev_group
+
 
 terminal = "alacritty"
 wallpapers = "/home/mr/Wallpapers/"
@@ -77,7 +80,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     #--Movement between groups--#
 
     [[mod], "p", lazy.screen.next_group()],
+    [[mod, "shift"], "p", lazy.function(window_to_next_group)],
     [[mod], "u", lazy.screen.prev_group()],
+    [[mod, "shift"], "u", lazy.function(window_to_prev_group)],
 
     ### Music management
 
