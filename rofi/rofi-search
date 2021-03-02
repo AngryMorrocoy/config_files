@@ -22,14 +22,14 @@ declare -A ICONS
 
 URLS=(
   ["google"]="https://www.google.com/search?q="
-  ["duckduckgo"]="https://www.duckduckgo.com/?q="
+  ["wikipedia"]="https://en.wikipedia.org/wiki/Special:Search?search="
   ["github"]="https://github.com/search?q="
+  ["youtube"]="https://www.youtube.com/results?search_query="
+  ["azlyrics"]="https://search.azlyrics.com/search.php?q="
+  ["duckduckgo"]="https://www.duckduckgo.com/?q="
   ["stackoverflow"]="http://stackoverflow.com/search?q="
   ["superuser"]="http://superuser.com/search?q="
   ["askubuntu"]="http://askubuntu.com/search?q="
-  ["youtube"]="https://www.youtube.com/results?search_query="
-  ["azlyrics"]="https://search.azlyrics.com/search.php?q="
-  ["wikipedia"]="https://en.wikipedia.org/wiki/Special:Search?search="
 )
 
 ICONS=(
@@ -41,7 +41,7 @@ ICONS=(
   ["askubuntu"]=""
   ["youtube"]=""
   ["azlyrics"]=""
-  ["wikipedia"]="W"
+  ["wikipedia"]="磌 "
 )
 
 # List for rofi
