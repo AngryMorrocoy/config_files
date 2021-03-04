@@ -2,10 +2,10 @@ from libqtile import layout
 from settings.themes import colors
 
 layout_theme = {
-    "border_width": 1,
-    "margin": 4,
-    "border_focus": colors["color4"][0],
-    "border_normal": colors["inactive"][0]
+    "border_width": 3,
+    "margin": 5,
+    "border_focus": colors["focused"][0],
+    "border_normal": colors["unfocused"][0]
 }
 
 layouts = [

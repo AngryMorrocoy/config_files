@@ -3,6 +3,8 @@
     "active": ["#ffffff", "#ffffff"],
     "inactive": ["#BD7C6C", "#BD7C6C"],
     "urgent": ["#FD4129", "#FD4129"],
+    "focused": ["#FF0A2C", "#FF0A2C"],
+    "unfocused": ["#673C23", "#673C23"],
     "color1": ["#072249", "#072249"],
     "color2": ["#FD2946", "#FD2946"],
     "color3": ["#030735", "#030735"],
