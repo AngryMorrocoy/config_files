@@ -2,14 +2,6 @@ import subprocess
 import requests
 import re
 from bs4 import BeautifulSoup
-from libqtile import hook
-
-@hook.subscribe.client_focus
-def on_focus_change(window):
-    """Brings to front a floating windows when focused"""
-    if window.info()["floating"]:
-        window.cmd_bring_to_front()
-
 
 def window_to_next_group(qtile):
     """Swithcs the actual window to the next group"""
