@@ -19,6 +19,7 @@ for i, ws in enumerate(groups, 1):
     keys.extend([
         # Switch to a group with mod+number of that group
         Key([mod], str(i), lazy.group[ws.name].toscreen()),
-        # Move a window to a workspace with mod+shift+numer of that group
-        Key([mod, "shift"], str(i), lazy.window.togroup(ws.name))
+        # Move a window to a workspace with mod+shift+number of that group
+        Key([mod, "shift"], str(i), lazy.window.togroup(ws.name)),
     ])
+

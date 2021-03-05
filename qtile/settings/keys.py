@@ -1,6 +1,8 @@
 from os import environ
 from libqtile.config import Key
 from libqtile.command import lazy
+from .extra import resize_floating
+from .extra import move_floating
 from .extra import window_to_next_group
 from .extra import window_to_prev_group
 
@@ -48,6 +50,16 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     ### Windows movements and control
 
+    #--Moving floating windows--
+    [[mod], "Left", lazy.function(move_floating, -20, 0)],
+    [[mod], "Up", lazy.function(move_floating, 0, -20)],
+    [[mod], "Right", lazy.function(move_floating, 20, 0)],
+    [[mod], "Down", lazy.function(move_floating, 0, 20)],
+    #--Resizing floating windows--
+    [[mod, "shift"], "Left", lazy.function(resize_floating, -20, 0)],
+    [[mod, "shift"], "Up", lazy.function(resize_floating, 0, -20)],
+    [[mod, "shift"], "Right", lazy.function(resize_floating, 20, 0)],
+    [[mod, "shift"], "Down", lazy.function(resize_floating, 0, 20)],
     #--Close a window--#
     [[mod], "w", lazy.window.kill()],
     #--Switch between windows in current stack pane

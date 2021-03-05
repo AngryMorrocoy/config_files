@@ -2,21 +2,47 @@ import subprocess
 import requests
 import re
 from bs4 import BeautifulSoup
-from libqtile.command import lazy
+from libqtile import hook
+
+@hook.subscribe.client_focus
+def on_focus_change(window):
+    """Brings to front a floating windows when focused"""
+    if window.info()["floating"]:
+        window.cmd_bring_to_front()
 
 
 def window_to_next_group(qtile):
+    """Swithcs the actual window to the next group"""
     group_names = [x.name for x in qtile.groups]
     current_group = qtile.current_group.name
-    next_group = group_names[(group_names.index(current_group) + 1) % len(group_names)]
-    qtile.current_window.cmd_togroup(next_group)
+    next_group = qtile.groups[(group_names.index(current_group) + 1) % len(group_names)]
+    qtile.current_window.cmd_togroup(next_group.name)
+
+    qtile.current_screen.toggle_group(next_group)
 
 
 def window_to_prev_group(qtile):
+    """Swithcs the actual window to the previous group"""
     group_names = [x.name for x in qtile.groups]
     current_group = qtile.current_group.name
-    next_group = group_names[(group_names.index(current_group) - 1) % len(group_names)]
-    qtile.current_window.cmd_togroup(next_group)
+    next_group = qtile.groups[(group_names.index(current_group) - 1) % len(group_names)]
+    qtile.current_window.cmd_togroup(next_group.name)
+
+    qtile.current_screen.toggle_group(next_group)
+
+
+def move_floating(qtile, dx, dy):
+    """Function for moving floating windows, only if they're floating"""
+    curr_window_info = qtile.current_window.info()
+    if curr_window_info["floating"]:
+        qtile.current_window.cmd_move_floating(dx, dy)
+
+
+def resize_floating(qtile, dw, dh):
+    """Function for resizing floating windows, only if they're floating"""
+    curr_window_info = qtile.current_window.info()
+    if curr_window_info["floating"]:
+        qtile.current_window.cmd_resize_floating(dw, dh)
 
 
 def get_dollar():

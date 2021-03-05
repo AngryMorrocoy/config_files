@@ -30,9 +30,12 @@ def load_external_conf():
     script_file = path.join(qtile_path, "load_xinput.py")
     config_file = path.join(qtile_path, "xinput_props.json")
 
-    subprocess.call(["xsetroot", "-cursor_name", "left_ptr"])
     subprocess.call([script_file, config_file])
     subprocess.call(path.join(qtile_path, "autostart.sh"))
+
+@hook.subscribe.startup_complete
+def on_startup():
+    subprocess.call(["xsetroot", "-cursor_name", "left_ptr"])
 
 
 main = None
