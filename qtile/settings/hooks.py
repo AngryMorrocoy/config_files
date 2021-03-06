@@ -1,5 +1,5 @@
 from libqtile import hook
-from .path import path
+from .path import qtile_path
 from os import path
 import subprocess
 
@@ -11,6 +11,7 @@ def load_external_conf():
 
     subprocess.call([script_file, config_file])
     subprocess.call(path.join(qtile_path, "autostart.sh"))
+
 
 @hook.subscribe.startup_complete
 def on_startup():
