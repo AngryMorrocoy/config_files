@@ -3,6 +3,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
+
 def window_to_next_group(qtile):
     """Swithcs the actual window to the next group"""
     group_names = [x.name for x in qtile.groups]

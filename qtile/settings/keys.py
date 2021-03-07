@@ -67,6 +67,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     [[mod], "j", lazy.layout.down()],
     [[mod], "h", lazy.layout.left()],
     [[mod], "l", lazy.layout.right()],
+    [[mod, "control"], "j", lazy.group.prev_window()],
+    [[mod, "control"], "k", lazy.group.next_window()],
     #--Sitch window focus to other pane(s) of stack
     [[mod], "space", lazy.layout.next()],
     #--Move windows on current stack--#
