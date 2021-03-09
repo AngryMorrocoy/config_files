@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+CONFIG_EDITOR="vim"
+
+declare -A CONFIGS
+
+CONFIGS=(
+    ["qtile"]="$HOME/.config/qtile/"
+    ["vim"]="$HOME/.config/vim/"
+    ["rofi"]="$HOME/.config/rofi/"
+    ["alacritty"]="$HOME/.config/alacritty/"
+    ["zsh"]="$HOME/.config/zsh/"
+)
+
+
+
+gen_list() {
+    for i in "${!CONFIGS[@]}"; do
+        echo ${i}
+    done
+}
+
+edit_config() {
+    alacritty --working-directory $1 -e $CONFIG_EDITOR .
+}
+
+main() {
+    cnfg=$( gen_list | rofi -dmenu -no-custom -p "Edit config" )
+    if [[ -n "$cnfg" ]]; then
+        edit_config ${CONFIGS[$cnfg]}
+    fi
+}
+
+main
+
+exit 0
+

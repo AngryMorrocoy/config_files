@@ -17,6 +17,8 @@
 # -----------------------------------------------------------------------------
 # Script:
 
+BROWSER="firefox --new-tab"
+
 declare -A URLS
 declare -A ICONS
 
@@ -67,7 +69,7 @@ main() {
       main
     elif [[ -n "$query" ]]; then
       url=${URLS[$platform]}$query
-      xdg-open "$url"
+      $BROWSER "${url}"
     else
       exit
     fi

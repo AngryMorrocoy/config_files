@@ -25,7 +25,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     #--Launchs rofi--#
     [[mod], "m", lazy.spawn("rofi -matching regex -modi run,drun -show run")],
     [[alt], "Tab", lazy.spawn("rofi -matching regex -modi window -show window")],
-    [[mod], "s", lazy.spawn(f"{HOME}/.config/rofi/rofi-search")],
+    [[mod], "s", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-search")],
+    [[mod], "c", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-config-editor")],
     #--Commonly used stuff--#
     [[mod, "control"], "1", lazy.spawn("firefox")],
     [[mod, "control"], "2", lazy.spawn("audacious")],

@@ -13,7 +13,7 @@ def load_props(props_file="xinput_props.json"):
 def set_props(props):
     for device in props:
         for prop, value in props[device].items():
-            os.system(f"xinput set-prop {device} {prop} {value}")
+            os.system(f"xinput set-prop '{device}' '{prop}' '{value}'")
 
 if __name__ == '__main__':
     if len( sys.argv ) != 2:
