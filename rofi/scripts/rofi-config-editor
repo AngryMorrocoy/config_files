@@ -10,6 +10,8 @@ CONFIGS=(
     ["rofi"]="$HOME/.config/rofi/"
     ["alacritty"]="$HOME/.config/alacritty/"
     ["zsh"]="$HOME/.config/zsh/"
+    ["openbox"]="$HOME/.config/openbox/"
+    ["vifm"]="$HOME/.config/vifm/"
 )
 
 
