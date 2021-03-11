@@ -29,6 +29,7 @@ set syscalls
 " I recommend not changing this until you are familiar with vifm.
 " This probably shouldn't be an option.
 
+set trashdir="$XDG_CACHE_HOME/vifm-thrash"
 set notrash
 
 " This is how many directories to store in the directory history.
@@ -64,7 +65,7 @@ set norunexec
 
 " List of color schemes to try (picks the first one supported by the terminal)
 
-colorscheme Default-256 Default
+colorscheme gruvbox Default-256 Default
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -192,7 +193,7 @@ filextype {*.djvu},<image/vnd.djvu>
 filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus},
         \<audio/*>
        \ {Play using audacious}
-       \ audacious %f &,
+       \ audacious %f&,
        \ {Play using ffplay}
        \ ffplay -nodisp -autoexit %c,
 fileviewer {*.mp3},<audio/mpeg> mp3info
@@ -446,12 +447,9 @@ nnoremap A cw
 
 " Open console in current directory
 nnoremap ,t :!alacritty --working-directory %d 2>/dev/null &<cr>
-" nnoremap ,t :!termite -d %d 2>/dev/null&<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
-" Open gvim to edit vifmrc
-nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 
 " Toggle wrap setting on ,w key
 nnoremap ,w :set wrap!<cr>
@@ -566,6 +564,4 @@ set classify+=' ::*.log::'
 set classify+=' ::*.doc,,*.docx,,*.adoc::'
 set classify+=' ::*.xls,,*.xls,,*.xlsmx::'
 set classify+=' ::*.pptx,,*.ppt::'
-
-colorscheme gruvbox
 
