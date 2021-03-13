@@ -30,7 +30,7 @@ set syscalls
 " This probably shouldn't be an option.
 
 set trashdir="$XDG_CACHE_HOME/vifm-thrash"
-set notrash
+set trash
 
 " This is how many directories to store in the directory history.
 
@@ -119,6 +119,9 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 mark b ~/bin/
 mark h ~/
+mark d ~/Docs
+mark m /run/media/Shared/Shared/Music
+mark v /run/media/Shared/Shared/Videos
 
 " ------------------------------------------------------------------------------
 

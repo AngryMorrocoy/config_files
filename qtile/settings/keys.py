@@ -1,5 +1,5 @@
 from os import environ
-from libqtile.config import Key
+from libqtile.config import Key, KeyChord
 from libqtile.command import lazy
 from .extra import resize_floating
 from .extra import move_floating
@@ -22,18 +22,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     [[mod, alt], "h", lazy.hide_show_bar("top")],
     #--Shows a terminal--#
     [[mod], "Return", lazy.spawn(f"{terminal}")],
-    #--Launchs rofi--#
-    [[mod], "m", lazy.spawn("rofi -matching regex -modi run,drun -show run")],
+    #--Switch tabs--#
     [[alt], "Tab", lazy.spawn("rofi -matching regex -modi window -show window")],
-    [[mod], "s", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-search")],
-    [[mod], "c", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-config-editor")],
-    #--Commonly used stuff--#
-    [[mod, "control"], "1", lazy.spawn("firefox")],
-    [[mod, "control"], "2", lazy.spawn("audacious")],
-    [[mod, "control"], "3", lazy.spawn(f"{terminal} -e vifm")],
-    [[mod, "control"], "w", lazy.spawn(f"nitrogen '{wallpapers}'")],
-    [[mod, "control"], "p", lazy.spawn("zeal")],
-    [[mod, "control"], "h", lazy.spawn(f"{terminal} -e htop")],
     #--Switches my mouse modes--#
     [[mod, alt], "m", lazy.spawn("mouse_emulator")],
 
@@ -115,9 +105,35 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     [[mod, "control"], "Home", lazy.spawn("playerctl --player=vlc,%any position 10-")],
 
     ### Qtile management
-
     [[mod], "r", lazy.spawncmd()],
     [[mod, "control"], "r", lazy.restart()],
     [[mod, "control"], "q", lazy.shutdown()]
+]]
+
+keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
+    #--Keychords for rofi, all of them start with mod+m--#
+    [[mod], "m", [Key(key[0], key[1], *key[2:]) for key in [
+        #--Launchs the menu of launching--#
+        [[], "m", lazy.spawn("rofi -matching regex -modi run,drun -show run")],
+        #--The script for searching across the web--#
+        [[], "s", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-search")],
+        #--Script for look inside my configs--#
+        [[], "c", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-config-editor")]
+    ]]],
+    #--Keychord to launch my common used stuff--#
+    [[mod], "e", [Key(key[0], key[1], *key[2:]) for key in [
+        #--Launchs firefox--#
+        [[], "1", lazy.spawn("firefox")],
+        #--Launchs audacious--#
+        [[], "2", lazy.spawn("audacious")],
+        #--Launchs vifm--#
+        [[], "3", lazy.spawn(f"{terminal} -e vifm")],
+        #--Launchs nitrogen--#
+        [[], "w", lazy.spawn(f"nitrogen '{wallpapers}'")],
+        #--Launchs zeal--#
+        [[], "p", lazy.spawn("zeal")],
+        #--Launchs htop--#
+        [[], "h", lazy.spawn(f"{terminal} -e htop")],
+    ]]]
 ]]
 
