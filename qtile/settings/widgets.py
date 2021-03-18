@@ -31,7 +31,7 @@ text_icon = lambda fg="text", bg="color1", fontsize=15, text="?", font="DroidSan
 groupbox = [
     widget.GroupBox(
         **base(font="Karumbi Bold"),
-        fontsize=22,
+        fontsize=18,
         padding_x=8,
         padding_y=8,
         margin=3,

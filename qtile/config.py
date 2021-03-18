@@ -12,10 +12,10 @@ from libqtile.config import Screen
 screens = [
     Screen(
         top=bar.Bar(
-            mainbar_widgets, 17
+            mainbar_widgets, 15
         ),
         bottom=bar.Bar(
-            infobar_widgets, 20
+            infobar_widgets, 16
         )
     ),
 ]

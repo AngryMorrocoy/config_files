@@ -6,11 +6,11 @@ group_settings = [
     ["",  {"layout": "max"}],
     ["",  {"layout": "monadtall"}],
     ["嗢", {"layout": "monadtall"}],
-    ["",  {"layout": "monadtall"}],
+    ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
     ["",  {"layout": "monadtall"}],
-    ["﬒",  {"layout": "monadtall"}]
+    ["",  {"layout": "monadtall"}]
 ]
 
 groups = [Group(ws, **kwargs) for ws, kwargs in group_settings]
