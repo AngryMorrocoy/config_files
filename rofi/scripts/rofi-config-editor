@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-CONFIG_EDITOR="vim"
-
 declare -A CONFIGS
 
 CONFIGS=(
@@ -23,7 +21,7 @@ gen_list() {
 }
 
 edit_config() {
-    alacritty --working-directory $1 -e $CONFIG_EDITOR
+    alacritty --working-directory $1
 }
 
 main() {
