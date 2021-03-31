@@ -37,13 +37,13 @@ groupbox = [
         margin=3,
         border_width=1,
 
-        highlight_color=colors["color3"],
+        highlight_color=colors["color2"],
         active=colors["active"],
-        this_current_screen_border=colors["color3"],
+        this_current_screen_border=colors["color2"],
         inactive=colors["inactive"],
         urgent_border=colors["urgent"],
 
-        highlight_method="line",
+        highlight_method="block",
         rounded=False,
 
         disable_drag=True,
