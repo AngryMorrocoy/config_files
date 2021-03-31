@@ -73,7 +73,7 @@ def get_battery_status():
     try:
         bats_out = subprocess.check_output("bats", universal_newlines=True).rstrip()
     except subprocess.CalledProcessError:
-        return "..."
+        return ""
 
     batt_lvl, batt_status = re.search("^(\d+)(\D{1})$", bats_out).groups()
     batt_lvl = int(batt_lvl)
