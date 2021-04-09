@@ -63,8 +63,8 @@ configuration {
     /*theme: "Adapta-Nokto";*/
     /*theme: "Arc-Dark";*/
     /*theme: "Pop-Dark";*/
-    theme: "purple";
-    /*theme: "minimal";*/
+    /*theme: "purple";*/
+    theme: "gruvbox";
 
     /*color-normal: ;*/
     /*color-urgent: ;*/

@@ -1,7 +1,7 @@
 {
     "text": ["#000000", "#000000"],
-    "active": ["#ffffff", "ffffff"],
-    "inactive": ["#5C5C5C", "#5C5C5C"],
+    "active": ["#2D2628", "#2D2628"],
+    "inactive": ["#617AFF", "#617AFF"],
     "urgent": ["#8307A2", "#8307A2"],
     "focused": ["#F37C95", "#F37C95"],
     "unfocused": ["#4B3767", "#4B3767"],
