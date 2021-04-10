@@ -1,0 +1,12 @@
+{
+    "text":      ["#ffffff", "#ffffff"],
+    "active":    ["#ffffff", "ffffff"],
+    "inactive":  ["#5C5C5C", "#5C5C5C"],
+    "urgent":    ["#8307A2", "#8307A2"],
+    "focused":   ["#ffffff", "#ffffff"],
+    "unfocused": ["#1A1A1A", "#1A1A1A"],
+    "color1":    ["#19181B", "#19181B"],
+    "color2":    ["#554D4E", "#554D4E"],
+    "color3":    ["#1A1A1A", "#1A1A1A"],
+    "color4":    ["#ffffff", "#ffffff"]
+}
