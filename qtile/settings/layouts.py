@@ -1,4 +1,5 @@
 from libqtile import layout
+from libqtile.config import Match
 from settings.themes import colors
 
 layout_theme = {
@@ -16,5 +17,9 @@ layouts = [
     layout.Matrix(**{key:value for key,value in layout_theme.items() if key != "margin"}, margin=0),
 ]
 
-floating_layout = layout.Floating(**{key:value for key,value in layout_theme.items() if key != "margin"})
+floating_layout = layout.Floating(float_rules=[
+        *layout.Floating.default_float_rules,
+        Match(title="Qalculate!")
+    ],
+    **{key:value for key,value in layout_theme.items() if key != "margin"})
 

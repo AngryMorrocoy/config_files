@@ -15,8 +15,6 @@ mod = "mod4"
 alt = "mod1"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
-    ### Spawn util apps
-
     #--Toggles visibility of the bars--#
     [[mod, alt], "b", lazy.hide_show_bar("bottom")],
     [[mod, alt], "h", lazy.hide_show_bar("top")],
@@ -134,6 +132,8 @@ keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
         [[], "p", lazy.spawn("zeal")],
         #--Launchs htop--#
         [[], "h", lazy.spawn(f"{terminal} -e htop")],
+        #--Launchs qalculate--#
+        [[], "c", lazy.spawn(f"qalculate-gtk")],
     ]]]
 ]]
 
