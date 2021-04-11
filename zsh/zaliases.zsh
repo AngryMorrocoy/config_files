@@ -1,6 +1,9 @@
 # Aliases
 
-alias vim="vim -u '~/.config/vim/vimrc'"
+# Use neovim instead
+alias vim="nvim"
+# Vim loads the right config
+#alias vim="vim -u '~/.config/vim/vimrc'"
 
 alias ls="ls --color=auto --group-directories-first"
 alias br="br -pi"
