@@ -13,7 +13,7 @@ layouts = [
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
-    # layout.Stack(**layout_theme, num_stacks=2),
+    layout.Stack(**layout_theme, num_stacks=2),
     layout.Matrix(**{key:value for key,value in layout_theme.items() if key != "margin"}, margin=0),
 ]
 

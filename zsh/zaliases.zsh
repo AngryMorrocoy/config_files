@@ -1,5 +1,7 @@
 # Aliases
 
+alias vim="vim -u '~/.config/vim/vimrc'"
+
 alias ls="ls --color=auto --group-directories-first"
 alias br="br -pi"
 alias c="clear"
