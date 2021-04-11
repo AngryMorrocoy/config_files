@@ -22,6 +22,7 @@ vifm/vifminfo.json
 !zsh/*
 !zsh/*/
 zsh/oh-my-zsh
-
+nvim/theme.vim
+./nvim/.netrwhist
 **/__pycache__
 qtile/settings.json

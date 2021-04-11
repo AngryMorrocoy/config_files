@@ -53,46 +53,49 @@ nnoremap <C-q> <C-y>
 " Splits stuff
 
 " Smooth movement
-"nnoremap <C-k> <C-w><C-k>
-"nnoremap <C-j> <C-w><C-j>
-"nnoremap <C-h> <C-w><C-h>
-"nnoremap <C-l> <C-w><C-l>
-"" Resizing
-"nnoremap <C-w>0    <C-w>=
-"nnoremap <C-Right> <C-w><
-"nnoremap <C-Left>  <C-w>>
-"nnoremap <C-Up>    <C-w>+
-"nnoremap <C-Down>  <C-w>-
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-l> <C-w><C-l>
+" Resizing
+nnoremap <C-w>0    <C-w>=
+nnoremap <C-Right> <C-w><
+nnoremap <C-Left>  <C-w>>
+nnoremap <C-Up>    <C-w>+
+nnoremap <C-Down>  <C-w>-
 
 
 "" Autoclosing
 
-"inoremap (\ (
-"inoremap () ()<C-c>i
-"inoremap (<Space> (<Space><Space>)<C-c>hi
-"inoremap (<BS> <C-c>i
-"inoremap ( ()<C-c>i
-"inoremap (<cr> (<CR>)<C-c>O
-"inoremap (; ();<C-c>hi
-"inoremap (;<cr> (<CR>);<C-c>O
-"inoremap (: ():<C-c>hi
+inoremap (\ (
+inoremap () ()<C-c>i
+inoremap (<Space> (<Space><Space>)<C-c>hi
+inoremap (<BS> <C-c>i
+inoremap ( ()<C-c>i
+inoremap (<cr> (<CR>)<C-c>O
+inoremap (; ();<C-c>hi
+inoremap (;<cr> (<CR>);<C-c>O
+inoremap (: ():<C-c>hi
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
-"inoremap {\ {
-"inoremap {} {}<C-c>i
-"inoremap {<Space> {<Space><Space>}<C-c>hi
-"inoremap {<BS> <C-c>i
-"inoremap { {}<C-c>i
-"inoremap {<cr> {<CR>}<C-c>O
-"inoremap {; {};<C-c>hi
-"inoremap {;<cr> {<CR>};<C-c>O
+inoremap {\ {
+inoremap {} {}<C-c>i
+inoremap {<Space> {<Space><Space>}<C-c>hi
+inoremap {<BS> <C-c>i
+inoremap { {}<C-c>i
+inoremap {<cr> {<CR>}<C-c>O
+inoremap {; {};<C-c>hi
+inoremap {;<cr> {<CR>};<C-c>O
+inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 
-"inoremap [\ [
-"inoremap [] []<C-c>i
-"inoremap [<Space> [<Space><Space>]<C-c>hi
-"inoremap [<BS> <C-c>i
-"inoremap [ []<C-c>i
-"inoremap [<cr> [<CR>]<C-c>O
-"inoremap [, [],<C-c>hi
-"inoremap [; [];<C-c>hi
-"inoremap [;<cr> [<CR>];<C-c>O
+inoremap [\ [
+inoremap [] []<C-c>i
+inoremap [<Space> [<Space><Space>]<C-c>hi
+inoremap [<BS> <C-c>i
+inoremap [ []<C-c>i
+inoremap [<cr> [<CR>]<C-c>O
+inoremap [, [],<C-c>hi
+inoremap [; [];<C-c>hi
+inoremap [;<cr> [<CR>];<C-c>O
+inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 
