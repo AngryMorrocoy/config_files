@@ -133,7 +133,9 @@ keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
         #--Launchs htop--#
         [[], "h", lazy.spawn(f"{terminal} -e htop")],
         #--Launchs qalculate--#
-        [[], "c", lazy.spawn(f"qalculate-gtk")],
+        [[], "c", lazy.spawn("qalculate-gtk")],
+        #--Launchs discord--#
+        [[], "d", lazy.spawn("discord")],
     ]]]
 ]]
 
