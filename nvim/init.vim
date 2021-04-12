@@ -183,16 +183,19 @@ if version >= 800 " If not started as vi
           return !col || getline('.')[col - 1]  =~# '\s'
         endfunction
 endif
+
 " Matchup
-let g:matchup_matchparen_deferred = 1
-let g:matchup_matchparen_hi_surround_always = 1
-let g:matchup_matchparen_offscreen = {'method': 'popup'}
+    let g:matchup_matchparen_deferred = 1
+    let g:matchup_matchparen_hi_surround_always = 1
+    let g:matchup_matchparen_offscreen = {'method': 'popup'}
+
 " Indentline
     let g:indentLine_char = "|"
     let g:indentLine_conceallevel = "1"
     let g:indentLine_color_term = 181
     let g:indentLine_first_char = '.'
     let g:indentLine_showFirstIndentLevel = 1
+
 " Vim-polyglot
     let g:vim_json_syntax_conceal = 0
     let g:vim_markdown_conceal = 0
@@ -206,6 +209,7 @@ let g:matchup_matchparen_offscreen = {'method': 'popup'}
     autocmd BufWinEnter * silent NERDTreeMirror
 
     let g:NERDTreeMapActivateNode = "l"
+
 " CtrlP
     " Command to use when ctrl+p is pressed
     let g:ctrlp_map='<c-p>'
@@ -229,6 +233,7 @@ let g:matchup_matchparen_offscreen = {'method': 'popup'}
     " Setting max_depth and max_files
     let g:ctrlp_max_depth=20
     let g:ctrlp_max_files=1000
+
 " Airline
     let g:airline#extensions#tabline#enabled=1
     let g:airline#extensions#tabline#left_sep = ''
@@ -240,6 +245,46 @@ let g:matchup_matchparen_offscreen = {'method': 'popup'}
     let g:airline_powerline_fonts=1
 
     let g:airline_theme="ayu"
+
+" Startify
+
+let g:ascii = [
+            \ '                ┌────────────────────────────┐            ',
+            \ '                │                            │            ',
+            \ '                │        m    m mmmmm        │            ',
+            \ '                │        ##  ## #   "#       │            ',
+            \ '                │        # ## # #mmmm"       │            ',
+            \ '                │        # "" # #   "m       │            ',
+            \ '                │        #    # #    "       │            ',
+            \ '                │                            │            ',
+            \ '                │                            │            ',
+            \ '                └────────────────────────────┘            ',
+            \ '----------------------------------------------------------',
+            \ '__     _____ __  __ _ ____    ____ _____  _    ____ _____',
+            \ '\ \   / /_ _|  \/  ( ) ___|  / ___|_   _|/ \  |  _ \_   _|',
+            \ ' \ \ / / | || |\/| |/\___ \  \___ \ | | / _ \ | |_) || |',
+            \ '  \ V /  | || |  | |  ___) |  ___) || |/ ___ \|  _ < | |',
+            \ '   \_/  |___|_|  |_| |____/  |____/ |_/_/   \_\_| \_\|_|'
+            \ ]
+
+let g:startify_custom_header =
+            \ 'startify#pad(g:ascii)'
+
+
+let g:startify_bookmarks = [
+    \ { 'C': '~/Codes/' },
+    \ { 'J': '~/IdeaProjects' },
+    \ { 'c': '~/.config' }
+    \ ]
+let g:startify_files_number=8
+let g:startify_padding_left=10
+
+let g:startify_lists = [
+    \ { 'type': 'bookmarks', 'header': ['        -Bookmarks-']     },
+    \ { 'type': 'files',     'header': ['        -MRU-']           },
+    \ { 'type': 'dir',       'header': ['        -MRU- '.getcwd()] },
+    \ { 'type': 'commands',  'header': ['        -Commands-']      },
+    \ ]
 
 map Q gq  " Don't use ex mode
 
