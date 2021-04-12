@@ -40,6 +40,13 @@ autocmd Colorscheme * highlight VertSplit ctermbg=NONE guibg=NONE guifg=fg
 autocmd Colorscheme * let g:default_guibg=synIDattr(hlID("Normal"), "bg#")
 " Saves the colorscheme default ctermbg
 autocmd Colorscheme * let g:default_ctermbg=synIDattr(hlID("Normal"), "bg")
+" Terminal stuff
+au TermOpen * setlocal listchars= nonumber norelativenumber
+au TermOpen * startinsert
+au BufEnter,BufWinEnter,WinEnter term://* startinsert
+au BufLeave term://* stopinsert
+" Closes the terminal if is the only one open
+au BufEnter * if (winnr("$") == 1 && bufname() =~ "^term://*") | q | endif
 
 " Functions and commands
 
@@ -66,7 +73,7 @@ command! CopyFilePath :!echo "%:p" | xclip -i -sel c
 " Toggles the background transparency
 command! ToggleBackgroundTransparency call ToggleBackgroundTransparency()
 " Command to open splitted term
-command! -nargs=* T split | resize 20 |terminal <args>
+command! -nargs=* T split | resize 12 |terminal <args>
 
 " Setters
 

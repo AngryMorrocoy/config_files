@@ -33,6 +33,9 @@ noremap <leader>q<cr> :q! <cr>
 
 " Opens a terminal
 noremap <leader>t :call Openterm()<cr>
+" To go on normal mode inside terminal
+tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n><C-W><C-W>
 
 " Coc
 nmap <silent>   <leader>g :call CocAction("jumpDefinition") <cr>
