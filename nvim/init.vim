@@ -45,8 +45,9 @@ autocmd Colorscheme * let g:default_ctermbg=synIDattr(hlID("Normal"), "bg")
 
 function! Openterm()
     " Opens a terminal
-    belowright term
-    resize -8
+    let cur_dir = execute(":pwd")[1:]
+    echo cur_dir
+    execute "!alacritty --working-directory ".cur_dir."&"
 endfunc
 
 function! ToggleBackgroundTransparency()
@@ -64,6 +65,8 @@ endf
 command! CopyFilePath :!echo "%:p" | xclip -i -sel c
 " Toggles the background transparency
 command! ToggleBackgroundTransparency call ToggleBackgroundTransparency()
+" Command to open splitted term
+command! -nargs=* T split | resize 20 |terminal <args>
 
 " Setters
 
@@ -209,6 +212,7 @@ endif
     autocmd BufWinEnter * silent NERDTreeMirror
 
     let g:NERDTreeMapActivateNode = "l"
+    let g:NERDTreeWinPos = "right"
 
 " CtrlP
     " Command to use when ctrl+p is pressed
@@ -274,7 +278,8 @@ let g:startify_custom_header =
 let g:startify_bookmarks = [
     \ { 'C': '~/Codes/' },
     \ { 'J': '~/IdeaProjects' },
-    \ { 'c': '~/.config' }
+    \ { 'c': '~/.config' },
+    \ { 'm': '/run/media/Shared/Shared/Music/canciones.txt' }
     \ ]
 let g:startify_files_number=8
 let g:startify_padding_left=10

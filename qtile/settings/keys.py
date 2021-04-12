@@ -136,6 +136,8 @@ keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
         [[], "c", lazy.spawn("qalculate-gtk")],
         #--Launchs discord--#
         [[], "d", lazy.spawn("discord")],
+        #--Launchs vim--
+        [[], "v", lazy.spawn(f"{terminal} -e nvim")],
     ]]]
 ]]
 
