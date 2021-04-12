@@ -1,0 +1,28 @@
+#!/bin/bash
+
+declare -A EDITORS
+
+EDITORS=(
+    ["NeoVim"]="alacritty -e nvim"
+    ["IntelliJ IDEA"]="idea"
+    ["Sublime Text 3"]="subl"
+    ["VsCode"]="vscodium"
+    ["Vim"]="alacritty -e vim"
+)
+
+gen_list() {
+    for i in "${!EDITORS[@]}";do
+        echo "${i}"
+    done
+}
+
+main() {
+    editor=$( (gen_list) | rofi -dmenu -i -no-custom -p "Select an editor: " )
+    if [[ -n "$editor" ]]; then
+        ${EDITORS[$editor]}
+    fi
+}
+
+main
+exit 0
+

@@ -116,7 +116,9 @@ keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
         #--The script for searching across the web--#
         [[], "s", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-search")],
         #--Script for look inside my configs--#
-        [[], "c", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-config-editor")]
+        [[], "c", lazy.spawn(f"{HOME}/.config/rofi/scripts/rofi-config-editor")],
+        #--Menu for editors--
+        [[], "v", lazy.spawn(f"{HOME}/.config/rofi/scripts/editor_select")]
     ]]],
     #--Keychord to launch my common used stuff--#
     [[mod], "e", [Key(key[0], key[1], *key[2:]) for key in [
