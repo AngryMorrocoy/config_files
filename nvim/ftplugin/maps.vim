@@ -38,7 +38,7 @@ noremap <leader>t :call Openterm()<cr>
 nmap <silent>   <leader>g :call CocAction("jumpDefinition") <cr>
 nmap <silent>   <leader>R :call CocAction("jumpReferences") <cr>
 nmap <leader>.r <Plug>(coc-rename)
-nmap <leader>s :CocSearch
+nmap <leader>s :CocSearch<SPACE>
 
 
 " CtrlP
@@ -70,7 +70,7 @@ nnoremap <C-Down>  <C-w>-
 inoremap (\ (
 inoremap () ()<C-c>i
 inoremap (<Space> (<Space><Space>)<C-c>hi
-inoremap (<BS> <C-c>i
+inoremap (<BS> <C-c>a
 inoremap ( ()<C-c>i
 inoremap (<cr> (<CR>)<C-c>O
 inoremap (; ();<C-c>hi
@@ -81,7 +81,7 @@ inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")
 inoremap {\ {
 inoremap {} {}<C-c>i
 inoremap {<Space> {<Space><Space>}<C-c>hi
-inoremap {<BS> <C-c>i
+inoremap {<BS> <C-c>a
 inoremap { {}<C-c>i
 inoremap {<cr> {<CR>}<C-c>O
 inoremap {; {};<C-c>hi
@@ -91,7 +91,7 @@ inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}
 inoremap [\ [
 inoremap [] []<C-c>i
 inoremap [<Space> [<Space><Space>]<C-c>hi
-inoremap [<BS> <C-c>i
+inoremap [<BS> <C-c>a
 inoremap [ []<C-c>i
 inoremap [<cr> [<CR>]<C-c>O
 inoremap [, [],<C-c>hi

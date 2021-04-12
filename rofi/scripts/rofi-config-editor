@@ -5,6 +5,7 @@ declare -A CONFIGS
 CONFIGS=(
     ["qtile"]="$HOME/.config/qtile/"
     ["vim"]="$HOME/.config/vim/"
+    ["neovim"]="$HOME/.config/nvim/"
     ["rofi"]="$HOME/.config/rofi/"
     ["alacritty"]="$HOME/.config/alacritty/"
     ["zsh"]="$HOME/.config/zsh/"
