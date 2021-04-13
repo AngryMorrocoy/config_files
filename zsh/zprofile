@@ -9,7 +9,7 @@ emulate sh -c 'source /etc/profile'
 #*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 # Add .local/bin to path
-export PATH="${PATH}:$HOME/.local/bin/"
+export PATH="${PATH}:$HOME/.local/bin/:$HOME/.cargo/bin"
 
 # Default editor
 export EDITOR="vim"
