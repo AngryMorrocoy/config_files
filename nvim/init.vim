@@ -250,6 +250,7 @@ endif
     let g:airline#extensions#tabline#left_sep = ''
     let g:airline#extensions#tabline#left_alt_sep = ' '
     let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_buffers = 0
 
     let g:airline#extensions#branch#enabled=0
 
@@ -288,7 +289,7 @@ let g:startify_bookmarks = [
     \ { 'c': '~/.config' },
     \ { 'm': '/run/media/Shared/Shared/Music/canciones.txt' }
     \ ]
-let g:startify_files_number=8
+let g:startify_files_number=15
 let g:startify_padding_left=10
 
 let g:startify_lists = [
