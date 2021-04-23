@@ -8,7 +8,7 @@ function! Compile()
 endfunction
 
 function! Run()
-    :!clear && f="%:p" && java "${f\%.java}"
+    :f="%:p" && java "${f\%.java}"
 endfunction
 
 function! Com_run()

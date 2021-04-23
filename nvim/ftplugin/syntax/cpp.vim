@@ -8,7 +8,7 @@ function! Compile()
 endfunction
 
 function! Run()
-    :!clear && f="%:p" && ${f\%.cpp}
+    :f="%:p" && ${f\%.cpp}
 endfunction
 
 function! Com_run()

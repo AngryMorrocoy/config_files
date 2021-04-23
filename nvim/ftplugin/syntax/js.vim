@@ -6,5 +6,5 @@ setlocal expandtab
 
 " Run command
 au FileType javascript setlocal foldmethod=syntax
-noremap <buffer> <Leader>r :!clear; node '%' <cr>
+noremap <buffer> <Leader>r :!node '%' <cr>
 

@@ -6,6 +6,6 @@ setlocal smartindent
 
 " Run code command
 
-noremap <Leader>r :!clear; python3 '%' <Enter>
-noremap <Leader>dr :!clear; python3 '%'
+noremap <Leader>r :python3 '%' <Enter>
+noremap <Leader>dr :python3 '%'
 

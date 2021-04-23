@@ -10,7 +10,7 @@ function! Compile()
 endfunction
 
 function! Run()
-    :!clear && f='%:p' && ${f\%.c}
+    :f='%:p' && ${f\%.c}
 endfunction
 
 function! Com_run()
