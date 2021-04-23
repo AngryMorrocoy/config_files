@@ -244,7 +244,7 @@ endif
 
     " Setting max_depth and max_files
     let g:ctrlp_max_depth=20
-    let g:ctrlp_max_files=1000
+    let g:ctrlp_max_files=5000
 
 " Airline
     let g:airline#extensions#tabline#enabled=1
