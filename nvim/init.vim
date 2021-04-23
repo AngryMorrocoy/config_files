@@ -84,7 +84,8 @@ set termguicolors " Use the colors of the terminal
 
 set noswapfile " Disable the swapfiles
 
-set mouse-=a  " Disable mouse
+set mouse=n  " Disable mouse
+set clipboard+=unnamedplus " Sync with system clipboard
 
 set nobackup  " Chinguen a su madre los backups
 
@@ -147,7 +148,7 @@ au FileType cpp source ~/.config/nvim/ftplugin/syntax/cpp.vim  " C++
 
 au FileType java source ~/.config/nvim/ftplugin/syntax/java.vim  " C
 
-au FileType html source ~/.config/nvim/ftplugin/syntax/html.vim " Html
+au FileType html* source ~/.config/nvim/ftplugin/syntax/html.vim " Html
 au FileType xml source ~/.config/nvim/ftplugin/syntax/html.vim " Html
 
 au FileType css source ~/.config/nvim/ftplugin/syntax/css.vim " Css

@@ -37,6 +37,8 @@ noremap <leader>t :call Openterm()<cr>
 tnoremap <Esc> <C-\><C-n>
 tnoremap <Esc><Esc> <C-\><C-n><C-W><C-W>
 
+
+
 " Coc
 nmap <silent>   <leader>g :call CocAction("jumpDefinition") <cr>
 nmap <silent>   <leader>R :call CocAction("jumpReferences") <cr>

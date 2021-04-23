@@ -50,9 +50,9 @@ groupbox = [
         use_mouse_wheel=False,
     ),
     widget.WindowName(
-        **base(fg="color1", font="JetBrains Mono Medium Nerd Font"),
+        **base(font="Hurmit Nerd Font Mono"),
         padding=3,
-        fontsize=10
+        fontsize=12
     ),
 ]
 
