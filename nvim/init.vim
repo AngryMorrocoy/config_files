@@ -85,7 +85,6 @@ set termguicolors " Use the colors of the terminal
 set noswapfile " Disable the swapfiles
 
 set mouse=n  " Disable mouse
-set clipboard+=unnamedplus " Sync with system clipboard
 
 set nobackup  " Chinguen a su madre los backups
 
@@ -230,7 +229,7 @@ endif
 
     " Ignore son files or dirs
     let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.?(git|hg|svn|__pycache__|node_modules)$',
+      \ 'dir':  '\v[\/]\.?(git|hg|svn|__pycache__|node_modules|.vscode)$',
       \ 'file': '\v\.(exe|so|dll)$',
       \ 'link': '',
       \ }
@@ -316,6 +315,9 @@ let g:startify_lists = [
     \ { 'type': 'dir',       'header': ['        -MRU- '.getcwd()] },
     \ { 'type': 'commands',  'header': ['        -Commands-']      },
     \ ]
+
+" Vim-rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 map Q gq  " Don't use ex mode
 

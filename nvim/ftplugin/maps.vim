@@ -1,5 +1,7 @@
 " Saves the file
 noremap <leader>w :w<cr>
+" (Fugitive) write the file on github
+noremap <leader><leader>w :Gw<cr>
 " Faster indentation
 nnoremap > >>
 nnoremap < <<
@@ -36,8 +38,6 @@ noremap <leader>t :call Openterm()<cr>
 " To go on normal mode inside terminal
 tnoremap <Esc> <C-\><C-n>
 tnoremap <Esc><Esc> <C-\><C-n><C-W><C-W>
-
-
 
 " Coc
 nmap <silent>   <leader>g :call CocAction("jumpDefinition") <cr>
