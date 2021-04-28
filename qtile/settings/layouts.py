@@ -19,7 +19,7 @@ layouts = [
 
 floating_layout = layout.Floating(float_rules=[
         *layout.Floating.default_float_rules,
-        Match(title="Qalculate!")
+        Match(title="Qalculate!"), Match(wm_class="gpick")
     ],
     **{key:value for key,value in layout_theme.items() if key != "margin"})
 
