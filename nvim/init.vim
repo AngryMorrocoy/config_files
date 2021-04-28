@@ -226,6 +226,14 @@ endif
     " Command to use when ctrl+p is pressed
     let g:ctrlp_map='<c-p>'
     let g:ctrlp_cmd='CtrlPBuffer'
+    let g:ctrlp_working_path_mode='ra'
+
+    " Ignore son files or dirs
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.?(git|hg|svn|__pycache__|node_modules)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': '',
+      \ }
 
     " Search using regex
     let g:ctrlp_regexp=1
@@ -244,7 +252,7 @@ endif
 
     " Setting max_depth and max_files
     let g:ctrlp_max_depth=20
-    let g:ctrlp_max_files=5000
+    let g:ctrlp_max_files=1000
 
 " Airline
     let g:airline#extensions#tabline#enabled=1
@@ -253,7 +261,7 @@ endif
     let g:airline#extensions#tabline#formatter = 'unique_tail'
     let g:airline#extensions#tabline#show_buffers = 0
 
-    let g:airline#extensions#branch#enabled=0
+    let g:airline#extensions#branch#enabled=1
 
     let g:airline_powerline_fonts=1
 
