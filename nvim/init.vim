@@ -316,8 +316,8 @@ let g:startify_lists = [
     \ { 'type': 'commands',  'header': ['        -Commands-']      },
     \ ]
 
-" Vim-rainbow
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" NerdComment
+let g:NERDSpaceDelims=1
 
 map Q gq  " Don't use ex mode
 
