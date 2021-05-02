@@ -159,7 +159,7 @@ source ~/.config/nvim/ftplugin/maps.vim
 
 if version >= 800 " If not started as vi
     " Loads coc
-    packadd coc.nvim-release
+    packadd coc.nvim
     " Coc's config
         if has('nvim')
           inoremap <silent><expr> <c-space> coc#refresh()
