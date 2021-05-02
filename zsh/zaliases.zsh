@@ -8,7 +8,7 @@ alias vim="vim -u '~/.config/vim/vimrc'"
 alias ls="ls --color=auto --group-directories-first"
 alias br="br -pi"
 alias c="clear"
-alias cat="bat"
+# alias cat="bat"
 
 alias vimcfg="cd ${XDG_CONFIG_HOME}/vim && vim vimrc"
 alias bashcfg="vim $HOME/.bashrc"

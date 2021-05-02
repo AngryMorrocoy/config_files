@@ -35,7 +35,7 @@ export NCDU_SHELL=zsh
 # Vim as manpager
 #export MANPAGER='/bin/bash -c "vim -MRn -c \"set colorcolumn=0 buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 # Bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 #----Startx if user  in tty1 or tty2----

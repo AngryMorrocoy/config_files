@@ -64,7 +64,7 @@ configuration {
     /*theme: "Arc-Dark";*/
     /*theme: "Pop-Dark";*/
     /*theme: "purple";*/
-    theme: "gruvbox";
+    /* theme: "gruvbox";*/
 
     /*color-normal: ;*/
     /*color-urgent: ;*/
