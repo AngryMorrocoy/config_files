@@ -99,6 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Autocompletion
+source ${ZDOTDIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${ZDOTDIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Aliases
 source ${ZDOTDIR}/zaliases.zsh
 
 if [[ $(tty) == /dev/tty1 ]]; then; startx; fi
