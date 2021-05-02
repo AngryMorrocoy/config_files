@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 source ${ZDOTDIR}/zaliases.zsh
 
 if [[ $(tty) == /dev/tty1 ]]; then; startx; fi
+
