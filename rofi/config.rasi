@@ -56,15 +56,15 @@ configuration {
     click-to-exit: true;
     show-match: true;
 
-    /*theme: "Monokai";*/
-    /*theme: "gruvbox-dark-soft";*/
-    /*theme: "lb";*/
+    /* theme: "Monokai"; */
+    /* theme: "gruvbox-dark-soft"; */
+    /* theme: "lb"; */
     /*theme: "android_notification";*/
-    /*theme: "Adapta-Nokto";*/
-    /*theme: "Arc-Dark";*/
-    /*theme: "Pop-Dark";*/
-    /*theme: "purple";*/
-    /* theme: "gruvbox";*/
+    /* theme: "Adapta-Nokto"; */
+    theme: "Arc-Dark";
+    /* theme: "Pop-Dark"; */
+    /* theme: "purple"; */
+    /* theme: "gruvbox"; */
 
     /*color-normal: ;*/
     /*color-urgent: ;*/

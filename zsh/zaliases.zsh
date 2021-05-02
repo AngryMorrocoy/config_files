@@ -15,5 +15,3 @@ alias bashcfg="vim $HOME/.bashrc"
 alias zshcfg="cd ${XDG_CONFIG_HOME}/zsh && vim .zshrc"
 alias qtilecfg="cd ${XDG_CONFIG_HOME}/qtile && vim ."
 
-alias keysgenerator="$HOME/Codes/pykeysgenerator/keysgenerator"
-
