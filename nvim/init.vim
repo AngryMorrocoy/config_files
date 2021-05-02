@@ -132,8 +132,6 @@ set completeopt=menuone  " Changes the way completion is showed
 syntax on  " Enable syntax highlighting
 filetype plugin on  " Enables filetype detection
 
-let g:rainbow_active = 1
-
 " Filetype definition
 
 au FileType python source ~/.config/nvim/ftplugin/syntax/py.vim  " Python
