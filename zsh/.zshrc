@@ -99,14 +99,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Autocompletion
-source ${ZDOTDIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ${ZDOTDIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Aliases
 source ${ZDOTDIR}/zaliases.zsh
 
 if [[ $(tty) == /dev/tty1 ]]; then; startx; fi
 
 colorscript random
+
+# Plugins(?
+source ${ZDOTDIR}/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${ZDOTDIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/mr/.config/broot/launcher/bash/br
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 

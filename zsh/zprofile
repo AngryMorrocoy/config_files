@@ -12,7 +12,7 @@ emulate sh -c 'source /etc/profile'
 export PATH="${PATH}:$HOME/.local/bin/:$HOME/.cargo/bin"
 
 # Default editor
-export EDITOR="nvim"
+export EDITOR="vim"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
