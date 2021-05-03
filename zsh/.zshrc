@@ -108,3 +108,5 @@ source ${ZDOTDIR}/zaliases.zsh
 
 if [[ $(tty) == /dev/tty1 ]]; then; startx; fi
 
+colorscript random
+
