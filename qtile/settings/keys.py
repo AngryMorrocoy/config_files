@@ -128,6 +128,8 @@ keys += [KeyChord(keychord[0], keychord[1], keychord[2]) for keychord in [
         [[], "2", lazy.spawn("audacious")],
         #--Launchs vifm--#
         [[], "3", lazy.spawn(f"{terminal} -e vifm")],
+        #--Launchs thunar--#
+        [[], "e", lazy.spawn(f"thunar")],
         #--Launchs nitrogen--#
         [[], "w", lazy.spawn(f"nitrogen '{wallpapers}'")],
         #--Launchs zeal--#

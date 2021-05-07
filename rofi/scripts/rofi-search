@@ -32,6 +32,7 @@ URLS=(
   ["stackoverflow"]="http://stackoverflow.com/search?q="
   ["superuser"]="http://superuser.com/search?q="
   ["askubuntu"]="http://askubuntu.com/search?q="
+  ["AUR"]="https://aur.archlinux.org/packages/?O=0&K="
 )
 
 ICONS=(
@@ -44,6 +45,7 @@ ICONS=(
   ["youtube"]=""
   ["azlyrics"]=""
   ["wikipedia"]="磌 "
+  ["AUR"]=" "
 )
 
 # List for rofi
@@ -56,7 +58,7 @@ gen_list() {
 
 main() {
   # Pass the list to rofi
-  platform=$( (gen_list) | rofi -dmenu -no-custom -p "" )
+  platform=$( (gen_list) | rofi -dmenu -i -no-custom -p "" )
 
   if [[ -n "$platform" ]]; then
     if [[ ${ICONS[$platform]} = "" ]]; then
