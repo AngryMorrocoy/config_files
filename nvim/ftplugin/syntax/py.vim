@@ -3,6 +3,7 @@
 setlocal shiftwidth=4
 setlocal tabstop=4
 setlocal smartindent
+setlocal foldmethod=indent
 let g:NERDSpaceDelims=0
 
 " Run code command

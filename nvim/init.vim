@@ -129,6 +129,9 @@ set noshowcmd  " Doesn't show the command that is being tiped
 
 set completeopt=menuone  " Changes the way completion is showed
 
+set foldmethod=syntax " Enable folding uwu
+set nofoldenable
+
 syntax on  " Enable syntax highlighting
 filetype plugin on  " Enables filetype detection
 
@@ -262,8 +265,6 @@ endif
 
     let g:airline_powerline_fonts=1
 
-    let g:airline_theme="ayu"
-
 " Emmet
     let g:user_emmet_leader_key='<C-s>'
 
@@ -320,6 +321,7 @@ let g:NERDSpaceDelims=1
 map Q gq  " Don't use ex mode
 
 " Colorscheme configuration
+packadd! gruvbox-material
 
 if version >= 800
     source ~/.config/nvim/theme.vim
