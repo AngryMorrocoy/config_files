@@ -33,6 +33,7 @@ URLS=(
   ["superuser"]="http://superuser.com/search?q="
   ["askubuntu"]="http://askubuntu.com/search?q="
   ["AUR"]="https://aur.archlinux.org/packages/?O=0&K="
+  ["ARCH"]="https://archlinux.org/packages/?sort=&maintainer=&flagged=&q="
 )
 
 ICONS=(
@@ -46,6 +47,7 @@ ICONS=(
   ["azlyrics"]=""
   ["wikipedia"]="磌 "
   ["AUR"]=" "
+  ["ARCH"]=" "
 )
 
 # List for rofi

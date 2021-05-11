@@ -109,6 +109,7 @@ set shiftwidth=4  " Width of tabulation is 4 by default
 set tabstop=4  " ^
 
 set ignorecase " Makes the search case insensitive
+set nohlsearch " Doesn't highlight the current search
 
 set showtabline=2 " Always shows the tabline
 set number  " View linenumbers
@@ -130,7 +131,7 @@ set noshowcmd  " Doesn't show the command that is being tiped
 set completeopt=menuone  " Changes the way completion is showed
 
 set foldmethod=syntax " Enable folding uwu
-set nofoldenable
+set nofoldenable  " Disable floding on file read, can be enabled with zi
 
 syntax on  " Enable syntax highlighting
 filetype plugin on  " Enables filetype detection
