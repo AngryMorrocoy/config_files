@@ -222,6 +222,8 @@ endif
 
     let g:NERDTreeMapActivateNode = "l"
     let g:NERDTreeWinPos = "right"
+    let g:NERDTreeMinimalUI = 1
+    let g:NERDTreeAutoDeleteBuffer = 1
 
 " CtrlP
     " Command to use when ctrl+p is pressed
