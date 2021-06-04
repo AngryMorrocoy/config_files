@@ -8,5 +8,5 @@
     },
     "jedi.executable.command": "jedi-language-server",
     "tsserver.enableJavascript": true,
-    "coc.preferences.jumpCommand": "tab drop"
+    "coc.preferences.jumpCommand": "edit"
 }
