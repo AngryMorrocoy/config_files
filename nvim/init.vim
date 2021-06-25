@@ -320,6 +320,7 @@ let g:startify_lists = [
 
 " NerdComment
 let g:NERDSpaceDelims=1
+let g:rainbow_active = 1
 
 map Q gq  " Don't use ex mode
 
