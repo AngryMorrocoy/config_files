@@ -22,8 +22,8 @@ noremap <leader>Y :%w !xclip -i -sel c <cr>
 noremap <leader>v :r !xclip -o -sel c <cr>
 
 " Comment toggle VisualMode
-vnoremap <leader>x :call NERDComment('x', 'toggle') <cr>
-noremap  <leader>x :call NERDComment('n', 'toggle') <cr>
+" vnoremap <leader>x :call NERDComment('x', 'toggle') <cr>
+" noremap  <leader>x :call NERDComment('n', 'toggle') <cr>
 
 " Tab management
 noremap tw :tabclose <cr>

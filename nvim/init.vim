@@ -318,10 +318,6 @@ let g:startify_lists = [
     \ { 'type': 'commands',  'header': ['        -Commands-']      },
     \ ]
 
-" NerdComment
-let g:NERDSpaceDelims=1
-let g:rainbow_active = 1
-
 map Q gq  " Don't use ex mode
 
 " Colorscheme configuration
