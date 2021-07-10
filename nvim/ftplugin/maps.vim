@@ -44,7 +44,8 @@ nmap <silent>   <leader>g :call CocAction("jumpDefinition") <cr>
 nmap <silent>   <leader>R :call CocAction("jumpReferences") <cr>
 nmap <leader>.r <Plug>(coc-rename)
 nmap <leader>s :CocSearch<SPACE>
-
+nmap <leader>ac  <Plug>(coc-codeaction)
+nnoremap <silent><nowait> <leader>o  :<C-u>CocList outline<cr>
 
 " CtrlP
 nmap <silent> <leader>f :CtrlPCurWD <cr>
