@@ -10,6 +10,6 @@ let g:NERDSpaceDelims=0
 
 noremap <buffer> <Leader>r :!python3 '%' <Enter>
 noremap <buffer> <Leader>dr :!python3 '%'
-noremap <buffer> <Leader>A :Autopep8 <cr>
+noremap <buffer> <Leader>p :Autopep8 <cr>
 nmap <buffer> <Leader>C :w<CR>:!autoflake -i --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables %<CR>:!black %<CR><CR>:e!<CR>
 
