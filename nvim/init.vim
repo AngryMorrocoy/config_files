@@ -221,7 +221,7 @@ endif
     autocmd BufWinEnter * silent NERDTreeMirror
 
     let g:NERDTreeMapActivateNode = "l"
-    let g:NERDTreeWinPos = "right"
+    let g:NERDTreeWinPos = "left"
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeAutoDeleteBuffer = 1
 
